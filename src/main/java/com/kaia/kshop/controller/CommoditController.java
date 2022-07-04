@@ -29,10 +29,6 @@ public class CommoditController {
     @Autowired
     private CommoditMapper commoditMapper;
 
-    @Autowired
-
-    private CommoditService commoditService;
-
     @GetMapping("/goumai/{id}")
     public Result goumai(@PathVariable("id")Integer id){
         Commodit commodit = commoditMapper.selectById(id);
