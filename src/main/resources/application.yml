@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: KShop
+  datasource:
+    url: jdbc:mysql://124.220.28.81:3306/KShop?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: '0202'
+  redis:
+    host: 124.220.28.81
+    port: 6379
+    password: '0202'
+    timeout: 1800000
+    jedis:
+      pool:
+        max-active: 20
+        max-wait: -1 #负数表示没有限制
+        max-idle: 5
+        min-idle: 0
+  jackson: #返回json的全局时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations:
+    - classpath:com/kaia/kshop/mapper/xml/*.xml
+  type-aliases-package: com.kaia.kshop.entity
