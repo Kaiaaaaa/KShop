@@ -32,6 +32,3 @@ build/
 ### VS Code ###
 .vscode/
 
-
-git  config  user.name  用户名
-git  config  user.email 邮箱地址

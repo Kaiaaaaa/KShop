@@ -41,5 +41,9 @@ public class CommoditController {
         }
         return Result.ok();
     }
+
+    public Result chexiao(){
+        return  Result.ok();
+    }
 }
 
